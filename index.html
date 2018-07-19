@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name=”renderer” content=”webkit|ie-comp|ie-stand” />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/open-dev-radar.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = 16 * (clientWidth / 1920) + 'px' // 在1920下，1 rem = 16px
+                    if (doc.body) {
+                        doc.body.style.fontSize = docEl.style.fontSize
+                    }
+                    // console.log(docEl.style.fontSize)
+                };
+            recalc();
+            if (!doc.addEventListener) {
+                return;
+            }
+            win.addEventListener(resizeEvt, recalc, false)
+            doc.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window)
+
+        function myBrowser(){
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1;
+            if (isOpera) {
+                return "Opera"
+            }; //判断是否Opera浏览器
+            if (userAgent.indexOf("Firefox") > -1) {
+                return "FF";
+            } //判断是否Firefox浏览器
+            if (userAgent.indexOf("Chrome") > -1){
+                return "Chrome";
+            }
+            if (userAgent.indexOf("Safari") > -1) {
+                return "Safari";
+            } //判断是否Safari浏览器
+            if ((userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera)||userAgent.indexOf("Trident") > -1) {
+                return "IE";
+            }; //判断是否IE浏览器
+        }
+        //以下是调用上面的函数
+        var mb = myBrowser();
+        if ("IE" == mb) {
+            alert("请使用谷歌浏览或者360急速版本！");
+            window.location.replace("about:blank");
+        }
+        if ("FF" == mb) {
+            alert("请使用谷歌浏览或者360急速版本！");
+            window.location.replace("about:blank");
+            //alert("我是 Firefox");
+        }
+        if ("Chrome" == mb) {
+            //alert("我是 Chrome");
+        }
+        if ("Opera" == mb) {
+            alert("请使用谷歌浏览或者360急速版本！");
+            window.location.replace("about:blank");
+            //alert("我是 Opera");
+        }
+        if ("Safari" == mb) {
+            alert("请使用谷歌浏览或者360急速版本！");
+            window.location.replace("about:blank");
+            //alert("我是 Safari");
+        }
+    </script>
+</head>
+<body>
+    <div class="main backGround">
+        <div class="title">
+            <div class="titleLeft">新疆生产建设兵团</div>
+            <div class="titleRight">智慧小区管理平台</div>
+        </div>
+        <div class="content" style="color: #fff;">
+            <div class="contentLeft">
+                <div class="boxTilte">区域接入情况</div>
+                <div class="boxBoreder areaCalcH">
+                     <div class="areaContent">
+                        <ul class="skill">
+                            <li>
+                                <span class="skillTitle">第一师</span>
+                                <div class="shell">
+                                    <span class="expand th1"></span>
+                                    <span class="explain explain1">70<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第二师</span>
+                                <div class="shell">
+                                    <span class="expand th2"></span>
+                                    <span class="explain explain2">90<span class="perCen">团</span></span>
+                                </div>
+
+                            </li>
+                            <li>
+                                <span class="skillTitle">第三师</span>
+                                <div class="shell">
+                                    <span class="expand th3"></span>
+                                    <span class="explain explain3">50<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第四师</span>
+                                <div class="shell">
+                                    <span class="expand th4"></span>
+                                    <span class="explain explain4">10<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第五师</span>
+                                <div class="shell">
+                                    <span class="expand th5"></span>
+                                    <span class="explain explain5">100<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第六师</span>
+                                <div class="shell">
+                                    <span class="expand th6"></span>
+                                    <span class="explain explain6">65<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第七师</span>
+                                <div class="shell">
+                                    <span class="expand th7"></span>
+                                    <span class="explain explain7">78<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第八师</span>
+                                <div class="shell">
+                                    <span class="expand th8"></span>
+                                    <span class="explain explain8">12<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第九师</span>
+                                <div class="shell">
+                                    <span class="expand th9"></span>
+                                    <span class="explain explain9">36<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第十师</span>
+                                <div class="shell">
+                                    <span class="expand th10"></span>
+                                    <span class="explain explain10">56<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第十一师</span>
+                                <div class="shell">
+                                    <span class="expand th11"></span>
+                                    <span class="explain explain11">88<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skillTitle">第十二师</span>
+                                <div class="shell">
+                                    <span class="expand th12"></span>
+                                    <span class="explain explain12">68<span class="perCen">团</span></span>
+                                </div>
+                            </li>
+                        </ul>
+                     </div>
+                </div>
+                <div class="boxTilte mar">报警比重</div>
+                <div class="boxBoreder areaBox">
+                    <div class="areaContent" style="margin: 0 auto">
+                        <div class="calcArea" id="mainAnalysis" style="padding: 10px 0"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentCenter">
+                <div class="exitEntry">
+                    <div class="exitEntryTable">
+                        <div  style="display: table;padding: 6%;margin: 0 auto">
+                            <div  style="display: table-cell;padding-right: 40px">
+                                <img src="./image/person.png" style="width: 90%">
+                            </div>
+                            <div style="display: table-cell;vertical-align: middle">
+                                <div style="color: #FADF90;font-size: 13px">人口出入量</div>
+                                <div style="font-weight: bold;font-size: 28px">55682 <span style="font-size: 13px;font-weight: normal">人</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exitEntryTable">
+                        <div  style="display: table;padding: 6%;margin: 0 auto">
+                            <div  style="display: table-cell;padding-right: 40px">
+                                <img src="./image/vehicle.png" style="width: 90%">
+                            </div>
+                            <div style="display: table-cell;vertical-align: middle">
+                                <div style="color: #FADF90;font-size: 13px">车辆进出量</div>
+                                <div style="font-weight: bold;font-size: 28px">56389 <span style="font-size: 13px;font-weight: normal">车次</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mar">
+                    <div class="boxTilte">实时通行</div>
+                    <div  class="exitEntry">
+                        <div  id="news01"class="exitEntryTable" style="height: 6rem;overflow: hidden;padding:1% 0">
+                            <ul class="news01Ul" style="margin:0;padding: 0!important;text-align: center">
+                               
+                            </ul>
+                        </div>
+                        <div  id="news011" style="display: none;">
+                            <ul class="news011Ul" style="margin:0;padding: 0!important;text-align: center">
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">袁之双1 </span>
+                                    <span class="liSpan liSpanQ">女</span>
+                                    <span class="liSpan liSpanQ">43</span>
+                                    <span class="liSpan liSpanQ">1504261970****0483</span>
+                                    <span class="liSpan liSpanQ">22:10</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">夏烨烨2 </span>
+                                    <span class="liSpan liSpanQ">男</span>
+                                    <span class="liSpan liSpanQ">43</span>
+                                    <span class="liSpan liSpanQ">1521011989****3539</span>
+                                    <span class="liSpan liSpanQ">09:41</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">李飞双3 </span>
+                                    <span class="liSpan liSpanQ">女</span>
+                                    <span class="liSpan liSpanQ">48</span>
+                                    <span class="liSpan liSpanQ">1504261970****0483</span>
+                                    <span class="liSpan liSpanQ">20:42</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">王书蝶4 </span>
+                                    <span class="liSpan liSpanQ">女</span>
+                                    <span class="liSpan liSpanQ">28</span>
+                                    <span class="liSpan liSpanQ">3507011999****7165</span>
+                                    <span class="liSpan liSpanQ">06:10</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">陶以冬5 </span>
+                                    <span class="liSpan liSpanQ">女</span>
+                                    <span class="liSpan liSpanQ">30</span>
+                                    <span class="liSpan liSpanQ">6205211988****938X</span>
+                                    <span class="liSpan liSpanQ">08:30</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">侯宏盛6 </span>
+                                    <span class="liSpan liSpanQ">男</span>
+                                    <span class="liSpan liSpanQ">33</span>
+                                    <span class="liSpan liSpanQ">5101081985****9075</span>
+                                    <span class="liSpan liSpanQ">11:25</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">石冷霜7 </span>
+                                    <span class="liSpan liSpanQ">女</span>
+                                    <span class="liSpan liSpanQ">35</span>
+                                    <span class="liSpan liSpanQ">6543231983****4741</span>
+                                    <span class="liSpan liSpanQ">14:55</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0">
+                                    <span class=" liSpanN">邵茂才8 </span>
+                                    <span class="liSpan liSpanQ">男</span>
+                                    <span class="liSpan liSpanQ">28</span>
+                                    <span class="liSpan liSpanQ">3624011999****7318</span>
+                                    <span class="liSpan liSpanQ">15:55</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div  id="news02"class="exitEntryTable" style="height: 6rem;overflow: hidden;padding:1% 0">
+                            <ul class="news02Ul" style="margin:0;padding: 0!important;text-align: left">
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">陕A00591</span>
+                                    <span class="liSpan liSpanQ">22:10</span>
+                                    <span class="liSpan liSpanQ">森和阳光小区</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">陕A00084 </span>
+                                    <span class="liSpan liSpanQ">15:41</span>
+                                    <span class="liSpan liSpanQ">春江花悦园</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">粤S899XX </span>
+                                    <span class="liSpan liSpanQ">16:35</span>
+                                    <span class="liSpan liSpanQ">利道罗花园</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">辽B00886 </span>
+                                    <span class="liSpan liSpanQ">05:10</span>
+                                    <span class="liSpan liSpanQ">安惠悦馨苑</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">粤S80808 </span>
+                                    <span class="liSpan liSpanQ">09:30</span>
+                                    <span class="liSpan liSpanQ">御墅临枫</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">辽BXX8X8 </span>
+                                    <span class="liSpan liSpanQ">11:25</span>
+                                    <span class="liSpan liSpanQ">嘉御龙庭</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">辽B00006 </span>
+                                    <span class="liSpan liSpanQ">14:55</span>
+                                    <span class="liSpan liSpanQ">橡树湾-荣盛家园</span>
+                                </li>
+                                <li style="list-style: none;margin: 1% 0;padding-left: 5%;">
+                                    <span class=" liSpanN">陕A00876</span>
+                                    <span class="liSpan liSpanQ">15:55</span>
+                                    <span class="liSpan liSpanQ">伊山水岸-阳光景都</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="map">
+                    <div id="centerMap"></div>
+                    <!--<div class="ground-floor4">
+                        <div id="open-dev01" class="wrap-content open-dev">
+                            <div class="wrap-two-up wrap-two-up-middle">
+                                <div class="content content-two-up">
+                                    <div class="open-dev-radar">
+                                        <div class="open-dev-radar-pulse"></div>
+                                        <div class="open-dev-radar-pulse"></div>
+                                        <div class="open-dev-radar-pulse"></div>
+                                        <div class="open-dev-radar-pulse"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="ground-floor5">
+                        <div id="open-dev02" class="wrap-content open-dev">
+                            <div class="wrap-two-up wrap-two-up-middle">
+                                <div class="content content-two-up">
+                                    <div class="open-dev-radar">
+                                        <div class="open-dev-radar-pulse"></div>
+                                        <div class="open-dev-radar-pulse"></div>
+                                        <div class="open-dev-radar-pulse"></div>
+                                        <div class="open-dev-radar-pulse"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoPosition">
+                    <div class="boxBoreder" style="border-radius: 50px;height: 110px;">
+                        <div id="news" style="padding-left: 0px;height: 45px;margin: 30px 20px;font-size: 15px;color: #0DD4F9;line-height: 23px;overflow:hidden;">
+                            <div style="color: #F37432">黑名单：</div>
+                            <ul class="newsUl" style="margin-top:0!important">
+                                <li style="list-style: none">
+                                    车牌号为浙A38546的黑色桑塔纳轿车肇事逃逸在北京
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentRight">
+                <div class="boxTilte">报警比重</div>
+                <div class="boxBoreder">
+                    <div class="calcH" id="rightAlarmArea"></div>
+                </div>
+                <div class="boxTilte mar">近七日人车通行趋势</div>
+                <div class="boxBoreder">
+                    <div class="calcH" id="rightAlarmNum"></div>
+                </div>
+                <div class="boxTilte mar">近七日人车报警趋势</div>
+                <div class="boxBoreder">
+                    <div class="calcH" id="rightAlarmRatio"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var H = document.documentElement.clientHeight //浏览器可视区域的宽高
+        console.log('浏览器可视区域的高度： ',H)
+        // $('.contentCenter').height(parseInt(H-55))
+        // $('.contentLeft').height(parseInt(H-55))
+        $('.contentRight').height(parseInt(H-55))
+        // calcAreaH = $(".areaCalcH").height() + (18 * 2 + 25 +54 + 40);
+        //$(".calcArea").height(parseInt(H - calcAreaH))
+        // $(".areaBox").height(parseInt(H - calcAreaH))
+
+        $('.calcH').height(parseInt((H-174)/3))
+
+        let newWidth = Number(window.innerWidth);
+        let newHeight = Number(window.innerHeight);
+        console.log('newWidth: ',newWidth,' newHeight: ',newHeight)
+
+        var fontH = ($(".contentLeft").height())-($(".boxTilte").height() *3 + 25)-($(".areaCalcH").height()) - 20;
+        if(fontH > parseInt((H-174)/3)){
+            $(".calcArea").height(parseInt((H-174)/3));
+            var calcAreaP = parseInt((fontH - parseInt((H-174)/3))/2);
+            $(".calcArea").css({"padding-top":calcAreaP,"padding-bottom":calcAreaP})
+        }else if (fontH < parseInt((H-174)/3)) {
+            $(".calcArea").height(parseInt(fontH));
+        }
+
+        //$(".calcArea").css('padding', calcAreaP)
+
+        //ar areaCalcH = $(".areaCalcH").height();
+        //ar contentLeftH =$(".contentLeft").height();
+
+
+
+        setInterval(function(){
+            $('#news01').find('.news01Ul').animate({
+                marginTop: '-25px'
+            },1000,function(){
+                $(this).css({marginTop : "0px"});
+                var li = $('#news011').find('.news011Ul').children().first().clone()
+                // console.log('li:',li.html());
+                $(".news011Ul li:last").after(li);
+                //console.log(' $(".news011Ul li:last"):', $(".news011Ul li:last").html());
+                // 复制的数据
+                
+                $(".news011Ul li:first").remove();
+                //console.log('$(".news011Ul li:first"):',$(".news011Ul li:first").html());
+                
+                // $('#news01').find('.news01Ul').html($('#news011').find('.news011Ul').slice(1,5).html());
+                // $('#news01').find('.news01Ul').html($('.news011Ul'));
+                // var tempLi=$('.news011Ul');
+                var tempLi=$.extend(true, {}, $('.news011Ul'));
+                //console.log('tempLi: ',tempLi.html());
+                // console.log('$(.news011Ul): ',$('.news011Ul').html());
+                //console.log( tempLi=== $('.news011Ul'))
+                $('#news01').find('.news01Ul').html(tempLi.html());
+                // console.log(tempLi.children('li')[1])
+                // $('.news01Ul').html(tempLi.children('li')[1])
+                //$('#news01').find('.news01Ul').html(tempLi.children('li')[1]);
+                
+                // $('#news01').find('.news01Ul').html(tempLi.children('li')[1]);
+                // $('#news01').find('.news01Ul').html($('.news011Ul').html());
+                // $('#news01').find('.news01Ul').html($('.news011Ul'));
+                // $(".news01Ul").html($(".news01Ul li").eq(2,3));
+                // ($(".news01Ul li").eq(2,3)).append( $('#news01').find('.news01Ul'));
+                // console.log($(".news011Ul li").eq(2,3));
+                // console.log($(".news011Ul li").slice(2,3));
+                // console.log($(".news01Ul").find("li").slice(1,3));
+                // $(".news01Ul li").siblings().eq(2,3);
+                // $(".news011Ul li").siblings().eq(2,3);
+               /*  $(".news01Ul li:last").after(li);
+                $(".news01Ul li:first").remove(); */
+
+                //console.log('(.news011Ul).html()：',$('#news011').find('.news011Ul').html());
+                console.log('----------------------------------------------------------------');
+                // console.log('(.news011Ul).children()：',$('.news011Ul').children('li').html());
+               //console.log('(.news011Ul).length：',$('.news011Ul').children('li'));
+                // console.log('(.news011Ul).[3]：',$('.news011Ul').children('li')[3]);
+            })
+        },2000);
+
+        setInterval(function(){
+            $("#news02").find('.news02Ul').animate({
+                marginTop: '-25px'
+            },1000,function(){
+                $(this).css({marginTop : "0px"});
+                var li = $(".news02Ul").children().first().clone()
+                $(".news02Ul li:last").after(li);
+                $(".news02Ul li:first").remove();
+            })
+        },2000);
+
+        setInterval(function () {
+           var display1= $(".infoPosition").css("display")
+           if(display1=="none"){
+               $(".infoPosition").fadeIn(2000);
+           }else{
+               $(".infoPosition").fadeOut(2000);
+           }
+        },3000);
+       /* setInterval(function () {
+            for (let index = 1; index < 13; index++) {
+                let value=(Math.random() * 100).toFixed(0)+"%"
+                $(".th"+index).css("width",value)
+                $(".explain"+index).html(value.replace("%","")+ "<span class=\"perCen\">团</span>")
+            }
+        },5000);*/
+
+        changeSize();
+
+window.onresize = function() {
+
+    changeSize();
+
+};
+
+function changeSize() {
+
+    let newWidth = Number(window.innerWidth);
+    let newHeight = Number(window.innerHeight);
+    console.log('innerWidth: ',innerWidth,' innerHeight: ',innerHeight)
+    var appBox = document.querySelector('.main');
+    console.log('appBox: ',appBox)
+    console.log('屏幕分辨率：',window.screen.width,window.screen.height)
+    console.log(' 网页可见区域宽：'+ document.body.clientWidth);   
+    console.log(' 网页可见区域高：'+ document.body.clientHeight);   
+    console.log(' 屏幕可用工作区高度：'+ window.screen.availHeight);   
+    console.log(' 屏幕可用工作区宽度：'+ window.screen.availWidth);   
+    if(newWidth >= 1920) {
+
+        // appBox.style.left = (newWidth - 1920) / 2 + 'px';
+        // //appBox.style.top = (newHeight - 1080)/2 + 'px';
+        // appBox.style.top = ((newWidth / 1920 - 1) * 1080) / 2 + 'px';
+        appBox.style.transformOrigin = '0 0';
+       /*  appBox.style.transform = 'scale(' + newWidth / 1920 + ',' + newWidth / 1920 + ')';
+        appBox.style.width = (1920 / newWidth) * 100 + '%';
+        appBox.style.height = (1080 / newHeight) * 100 + '%'; */
+        appBox.style.transform = 'scale(' + newWidth / window.screen.width + ',' + newWidth / window.screen.width + ')';
+        appBox.style.width = (window.screen.width / newWidth) * 100 + '%';
+        appBox.style.height = (window.screen.height / newHeight) * 100 + '%';
+        console.log('appBox>= 1920): ',appBox)
+       
+
+    }
+
+    if(newWidth < 1920) {
+
+        appBox.style.transformOrigin = '0 0';
+       /*  appBox.style.transform = 'scale(' + newWidth / 1920 + ',' + newWidth / 1920 + ')';
+        appBox.style.width = (1920 / newWidth) * 100 + '%';
+        appBox.style.height = (1080 / newHeight) * 100 + '%'; */
+        /* appBox.style.transform = 'scale(' + newWidth / window.screen.width + ',' + newHeight / window.screen.width + ')'; */
+        // appBox.style.transform = 'scale(' + newWidth / window.screen.width + ',' + newHeight / window.screen.height  + ')';
+        appBox.style.width = (window.screen.width / newWidth) * 100 + '%';
+        appBox.style.height = ( newHeight / window.screen.height) * 100 + '%';
+        /* appBox.style.transform = 'scale(' + 1 + ',' + 1 + ')';
+        appBox.style.width = 1 * 100 + '%';
+        appBox.style.height = 1 * 100 + '%'; */
+        console.log('appBox< 1920): ',appBox)
+    }
+}
+    </script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/echarts.min.js"></script>
+    <script type="text/javascript" src="./js/leftAnalysis.js"></script>
+    <!-- <script type="text/javascript" src="./js/centerAlarm.js"></script> -->
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/rightAlarmArea.js"></script>
+    <script type="text/javascript" src="./js/rightAlarmNum.js"></script>
+    <script type="text/javascript" src="./js/rightAlarmRatio.js"></script>
+</body>
+</html>
